@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="color:rgb(173, 173, 173)">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h1>Predict Heart Failure</h1>
+            <br>
+            <h3>What is your Age?</h3><input id="age" name="age" type="number ">
+            <h3>Anaemia?</h3><br><input id="anaemia" name="anaemia" required="required" type="number ">
+            <h3>creatinine_phosphokinase?</h3><input id="creatinine_phosphokinase" name="creatinine_phosphokinase" required="required" type="number">
+            <h3>diabetes?</h3><br><input id="diabetes" name="diabetes" required="required" type="number ">
+            <h3>ejection_fraction?</h3><br><input name="ejection_fraction" id="ejection_fraction" required="required" type="number">
+            <h3>high_blood_pressure?</h3><br><input name="high_blood_pressure" id="high_blood_pressure" required="required" type="number ">
+            <h3>platelets?</h3><br><select name="platelets" id="platelets" required="required" type="number">
+            <h3>serum_creatinine?</h3><br><input name="serum_creatinine" id="serum_creatinine" required="required" type="number">
+            <h3>serum_sodium?</h3><br><input name="serum_sodium" id="serum_sodium" required="required" type="number">
+            <h3>sex?</h3><br><input name="sex" id="sex" required="required" type="number ">
+            <h3>smoking?</h3><br><input name="smoking" id="smoking" required="required" type="number">
+            <h3>time?</h3><br><input name="time" id="time" required="required" type="number">
+            
+            <br><br><button id="sub" type="submit ">Predict heart failure</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><h2 id='predict_text'>{{ predicted_value }}<h2>
+    </div>
+    <br>
+    <footer id='footer-style'>
+        <p>Deployed by : Mitali Sahu</p>
+        <a id='footer-style' href="mailto:mitalisah3733@gmail.com">Contact Us</a>
+    </footer>
+
+
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+
+        html
+        {
+            height: 100%;
+        }
+        body {
+            font-family: "Montserrat", sans-serif;
+            background-image: linear-gradient(to bottom right,#000428 , #004e92);
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: auto;
+            height: 45px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: rgb(224, 224, 196);
+        }
+        
+        #research {
+            width: auto;
+            height: 45px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #research:hover {
+            background-color: rgb(224, 224, 196);
+        }
+        
+        #resea {
+            width: auto;
+            height: 45px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #resea:hover {
+            background-color: rgb(224, 224, 196);
+        }
+        
+        #sub {
+            width: auto;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color:rgb(135, 217, 228);
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #predict_text
+        {
+            color:rgb(175, 230, 230);
+        }
+
+        #footer-style
+        {
+            color:rgb(219, 234, 236);
+            font-size: 10px;
+        }
+    </style>
+</body>
+
+</html>
